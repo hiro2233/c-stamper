@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Sello Criptográfico 4x4</title>
+    <link rel="stylesheet" href="style_generator.css">
+</head>
+<body>
+    <div class="container no-print">
+        <h1>Configuración de Sello 4x4</h1>
+        
+        <div class="input-group">
+            <label for="dateInput">Fecha del Sello (DD-MM-YYYY):</label>
+            <div class="controls">
+                <input type="text" id="dateInput" placeholder="26-03-2026">
+                <button onclick="generateMatrix()">Generar Matriz</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container no-print">
+        <label>PIN Secreto (0-65535)</label>
+        <input type="number" id="pinInput" min="0" max="65535" value="0">
+    </div>
+
+    <div class="matrix-wrapper">
+        <div class="hardware-border">
+            <div class="top-left-notch" title="Muesca de orientación"></div>
+            <div id="matrixGrid" class="matrix-grid">
+                </div>
+        </div>
+    </div>
+    
+    <div class="container no-print">
+        <div id="statusInfo" class="status">Listo para generar.</div>
+        <button class="btn-print" onclick="window.print()">Imprimir Guía</button>
+    </div>
+
+    <button onclick="analyzeSelloLongevity()" class="btn-alt no-print">Analizar Caducidad del Patrón</button>
+    <div id="longevityResult" class="matrix-wrapper no-print"></div>
+
+    <button onclick="analyzeFullDecadeCollisions()" class="btn-alt">Auditoría Total (Matriz 10 Años)</button>
+    <div id="fullAuditResult" class="status-alt"></div>
+
+    <button onclick="analyzeFrequencyDistribution()" class="btn-alt">Ver Distribución de Frecuencias (10 Años)</button>
+    <div id="frequencyResult" class="status-alt"></div>
+
+    <script src="script_generator.js"></script>
+</body>
+</html>

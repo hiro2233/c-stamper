@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Sello - Rango Cronológico</title>
+    <link rel="stylesheet" href="style_validator.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Verificador de Sello Físico</h1>
+        
+        <div class="input-group">
+            <div class="field">
+                <label>Inicio (DD-MM-YYYY)</label>
+                <input type="text" id="startDate" placeholder="01-01-2026">
+            </div>
+            <div class="field">
+                <label>Fin (DD-MM-YYYY)</label>
+                <input type="text" id="endDate" placeholder="31-12-2026">
+            </div>
+        </div>
+
+        <div class="field">
+            <label>PIN Secreto (0-65535)</label>
+            <input type="number" id="pinInput" min="0" max="65535" value="0">
+        </div>
+
+        <p class="instruction">Presione los círculos para replicar los "palitos" físicos:</p>
+        
+        <div class="matrix-wrapper">
+            <div class="hardware-border">
+                <div class="top-left-notch"></div>
+                <div id="matrixGrid" class="matrix-grid"></div>
+            </div>
+        </div>
+
+        <button class="btn-verify" onclick="verifyMatrix()">Realizar Barrido de Verificación</button>
+        <div id="resultInfo" class="result"></div>
+
+    </div>
+    <script src="script_validator.js"></script>
+</body>
+</html>

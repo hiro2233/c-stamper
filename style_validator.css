@@ -1,0 +1,27 @@
+body { font-family: 'Segoe UI', system-ui, sans-serif; display: flex; justify-content: center; background: #f8fafc; color: #1e293b; margin: 0; padding: 20px; }
+.container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; max-width: 450px; width: 100%; border-top: 5px solid #10b981; }
+h1 { font-size: 1.2rem; margin-bottom: 20px; color: #0f172a; text-transform: uppercase; }
+
+.input-group { display: flex; gap: 15px; justify-content: center; margin-bottom: 25px; }
+.field { display: flex; flex-direction: column; align-items: center; }
+label { font-size: 0.75rem; font-weight: bold; margin-bottom: 5px; color: #64748b; }
+input { padding: 10px; border: 2px solid #e2e8f0; border-radius: 6px; width: 130px; text-align: center; font-weight: bold; }
+
+.instruction { font-size: 0.85rem; color: #64748b; margin-bottom: 15px; }
+
+.matrix-wrapper { display: flex; justify-content: center; margin-bottom: 30px; }
+.hardware-border { position: relative; padding: 15px; border: 4px solid #334155; border-radius: 8px; background: #fff; }
+.top-left-notch { position: absolute; top: -4px; left: 15px; width: 25px; height: 10px; background: #fff; border-bottom: 4px solid #334155; border-left: 4px solid #334155; border-right: 4px solid #334155; z-index: 10; border-radius: 0 0 4px 4px; }
+
+.matrix-grid { display: grid; grid-template-columns: repeat(4, 60px); grid-template-rows: repeat(4, 60px); gap: 10px; }
+.cell { width: 60px; height: 60px; border: 2px solid #cbd5e1; border-radius: 50%; background: white; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.6rem; transition: 0.2s; color: #cbd5e1; }
+.cell.selected { background: #1e293b; color: #fff; border-color: #0f172a; box-shadow: inset 0 4px 6px rgba(0,0,0,0.3); }
+.cell.checksum { border-style: dashed; border-color: #ef4444; }
+.cell.selected.checksum { background: #ef4444; border-color: #b91c1c; }
+
+.btn-verify { padding: 15px; background: #10b981; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; width: 100%; font-size: 1rem; transition: background 0.2s; }
+.btn-verify:hover { background: #059669; }
+
+.result { margin-top: 20px; padding: 15px; border-radius: 8px; font-weight: bold; display: none; line-height: 1.5; }
+.success { background: #d1fae5; color: #065f46; border: 1px solid #10b981; display: block; }
+.error { background: #fee2e2; color: #991b1b; border: 1px solid #ef4444; display: block; }
