@@ -23,7 +23,15 @@
 
         <div class="field">
             <label>PIN Secreto (0-65535)</label>
-            <input type="number" id="pinInput" min="0" max="65535" value="0">
+            <input
+                type="password"
+                id="pinInput"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="5"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                placeholder="*****"
+            >
         </div>
 
         <p class="instruction">Presione los círculos para replicar los "palitos" físicos:</p>
