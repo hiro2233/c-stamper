@@ -1,7 +1,7 @@
 # 🛡️ c-stamper
 **Cryptographic Static Stamp Generator for Document Authentication**
 
-*Copyright (c) 2020 Hiroshi Takey F. <htakey@gmail.com> All rights reserved*
+*Copyright (c) 2026 Hiroshi Takey F. <htakey@gmail.com> All rights reserved*
 
 ## ⚙️ Technical Architecture
 The core system implements a one-way encryption flow to guarantee authenticity without the need for external databases:
