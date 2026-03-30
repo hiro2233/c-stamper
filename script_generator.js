@@ -258,7 +258,7 @@ async function analyzeFrequencyDistribution() {
     
     resultDiv.innerHTML = `
         <div style="text-align: left; padding: 10px;">
-            <strong>Resumen de Salud del PIN (${pinVal}):</strong><br>
+            <strong>Resumen de Salud del PIN:</strong><br>
             • Diseños distintos generados: <strong>${patternMap.size}</strong><br>
             • Índice de exclusividad: <strong>${uniquePercentage}%</strong>
             ${tableHTML}
