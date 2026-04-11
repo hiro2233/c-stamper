@@ -26,7 +26,7 @@ $$Hash = SHA256(Date + PrivateSalt)$$
 ## 🔧 Installation & Configuration
 1. Clone this repository:
    ```bash
-   git clone [https://github.com/hiro2233/c-stamper.git](https://github.com/hiro2233/c-stamper.git)
+   git clone https://github.com/hiro2233/c-stamper.git
 
 2. Configure your Private Salt within the script_generator.js file to personalize your unique cryptographic signature.
 
